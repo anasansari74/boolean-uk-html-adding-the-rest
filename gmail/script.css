@@ -1,0 +1,56 @@
+.container {
+  display: grid;
+  grid-template:
+    "top top top top" 100px
+    "left mail settings right" 1fr/
+    100px 1fr 100px 100px;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.top {
+  grid-area: top;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.left {
+  grid-area: left;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.mail {
+  grid-area: mail;
+  display: grid;
+  grid-auto-rows: repeat(1,1fr);
+  
+}
+
+.mail p{
+  border: 1px solid black;
+  
+}
+
+.settings {
+  grid-area: settings;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.right {
+  grid-area: right;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template:
+      "top top settings" 75px
+      "right right right" 50px
+      "left mail mail" 1fr/
+      100px 1fr 100px;
+}
